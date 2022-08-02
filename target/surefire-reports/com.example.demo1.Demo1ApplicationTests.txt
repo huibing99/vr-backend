@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo1.Demo1ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.263 s <<< FAILURE! - in com.example.demo1.Demo1ApplicationTests
+contextLoads  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'controller1' method 
+com.example.demo1.controller.controller1#hi()
+to {GET [/hello]}: There is already 'singleChoiceController' bean method
+com.example.demo1.controller.SingleChoiceController#hi() mapped.
+Caused by: java.lang.IllegalStateException: 
+Ambiguous mapping. Cannot map 'controller1' method 
+com.example.demo1.controller.controller1#hi()
+to {GET [/hello]}: There is already 'singleChoiceController' bean method
+com.example.demo1.controller.SingleChoiceController#hi() mapped.
+
